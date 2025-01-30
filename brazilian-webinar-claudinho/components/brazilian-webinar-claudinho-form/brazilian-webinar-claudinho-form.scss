@@ -1,0 +1,155 @@
+@import '~styles/mixins/index';
+
+
+.brazilian-webinar-claudinho-form {
+  padding: 21px 0 var(--spacing-4xl);
+
+  background-color: var(--brazilian-webinar-countdown-background);
+
+  @include tablet {
+    padding: 51px 0 var(--spacing-4xl);
+  }
+
+  @include desktop {
+    padding: 0;
+
+    background: none;
+  }
+
+  .landing-container {
+
+    @include desktop {
+      padding-top: 51px;
+      padding-bottom: var(--spacing-4xl);
+
+      max-width: 1180px;
+
+      background-color: var(--brazilian-webinar-countdown-background);
+    }
+  }
+
+  &__title {
+    margin: 0 auto 14px;
+
+    width: 100%;
+
+    color: var(--background-primary);
+
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: 28.8px;
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    @include tablet {
+      margin-bottom: var(--spacing-4xl);
+
+      max-width: 756px;
+
+      font-size: var(--font-size-4xl);
+      line-height: 48px;
+    }
+  }
+
+  .ui-webinars-modal__privacy {
+    position: absolute;
+    left: 50%;
+    bottom: 76px;
+
+    width: 100%;
+
+    color: #CBBEBE;
+    line-height: 25px;
+    text-align: center;
+
+    transform: translateX(-50%);
+
+    a {
+      color: var(--background-primary);
+    }
+
+    @include tablet {
+      bottom: 87px;
+    }
+
+    @include desktop {
+      bottom: 132px;
+    }
+  }
+
+  .ui-webinars-modal {
+    padding: 0;
+
+    &__fields-wrapper {
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-s);
+
+        margin: 0 auto;
+
+        max-width: 970px;
+      }
+    }
+  }
+
+  .ui-button {
+    display: block;
+
+    margin: 45px auto 0;
+
+    width: 100%;
+    max-width: 420px;
+
+    [lang="pt"] & {
+      margin: 77px auto 0;
+    }
+
+    @include mobile {
+      margin-top: 65px;
+    }
+
+    @include tablet {
+      margin-top: 35px;
+    }
+  }
+
+  .ui-button-layout_m {
+    --button-height: 69px;
+
+    margin: 0 auto;
+    padding: var(--spacing-l);
+
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .ui-button-layout-content {
+    font-size: var(--font-size-m);
+
+    @include tablet {
+      font-size: var(--font-size-semi-xl);
+    }
+  }
+
+  .ui-webinars-modal-success {
+    margin: 0 auto;
+    padding: 0;
+    gap: 0;
+
+    &__title {
+      color: var(--background-primary);
+    }
+  }
+
+  .ui-field {
+    overflow: hidden;
+
+    @include tablet {
+      max-width: 308px;
+    }
+  }
+}

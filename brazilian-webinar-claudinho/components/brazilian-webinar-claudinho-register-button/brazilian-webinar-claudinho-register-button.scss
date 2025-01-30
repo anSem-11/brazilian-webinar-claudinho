@@ -1,0 +1,38 @@
+@import '~styles/index';
+
+.brazilian-webinar-claudinho-register-button {
+  &__wrapper {
+    position: relative;
+    z-index: 5;
+
+    margin: 0 auto;
+
+    border: none;
+
+    background: none;
+
+    @include tablet {
+      margin: 0;
+
+      text-align: left;
+    }
+
+    .ui-button-layout_l {
+      padding: var(--spacing-l) var(--spacing-s);
+
+      height: 69px;
+
+      @include tablet {
+        max-width: 420px !important;
+      }
+    }
+
+    .ui-button-layout-content {
+      font-size: var(--font-size-m);
+
+      @include tablet {
+        font-size: var(--font-size-semi-xl);
+      }
+    }
+  }
+}

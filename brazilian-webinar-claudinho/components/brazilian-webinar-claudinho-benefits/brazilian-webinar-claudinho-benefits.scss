@@ -1,0 +1,89 @@
+@import '~styles/mixins/index';
+
+
+.brazilian-webinar-claudinho-benefits {
+  padding: var(--spacing-4xl) 0 var(--spacing-8xl);
+
+  @include desktop {
+    padding: var(--spacing-10xl) 0;
+  }
+
+  &__title {
+    margin: 0 auto var(--spacing-l);
+
+    width: 100%;
+
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: 28.8px;
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    @include tablet {
+      margin-bottom: 25.49px;
+
+      font-size: var(--font-size-36);
+      line-height: 43.2px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 0;
+
+    width: 100%;
+    max-width: 1170px;
+
+    list-style-type: none;
+    gap: var(--spacing-4xl);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--spacing-s);
+    }
+  }
+
+  &__item {
+    width: 100%;
+
+    text-align: center;
+
+    @include tablet {
+      max-width: 270px;
+    }
+
+    &-img {
+      margin: 0 auto var(--spacing-s);
+
+      @include tablet {
+        margin-bottom: var(--spacing-l);
+      }
+    }
+
+    &-subtitle {
+      margin: auto auto var(--spacing-s);
+
+      font-size: var(--font-size-semi-xl);
+      font-weight: var(--font-weight-600);
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.03em;
+    }
+
+    &-description {
+      margin: 0 auto;
+
+      font-size: var(--font-size-l);
+      font-weight: var(--font-weight-500);
+      line-height: 19.36px;
+      text-align: center;
+      letter-spacing: -0.03em;
+    }
+  }
+}

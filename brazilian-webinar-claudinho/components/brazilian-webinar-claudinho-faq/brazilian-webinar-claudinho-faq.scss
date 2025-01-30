@@ -1,0 +1,122 @@
+@import '~styles/mixins/index';
+
+
+.brazilian-webinar-claudinho-faq {
+  padding: 0 0 var(--spacing-7xl);
+
+  @include desktop {
+    padding: 0 0 var(--spacing-10xl);
+  }
+
+  &__title {
+    margin: 0 auto 12px;
+
+    width: 100%;
+
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: 28.8px;
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    @include tablet {
+      font-size: var(--font-size-36);
+      line-height: 43.2px;
+    }
+  }
+
+  &__description {
+    margin: 0 auto var(--spacing-4xl);
+
+    font-size: var(--font-size-semi-xl);
+    font-weight: var(--font-weight-600);
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.03em;
+
+    @include tablet {
+      margin: 0 auto var(--spacing-2xl);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 0;
+
+    width: 100%;
+    max-width: 1170px;
+
+    list-style-type: none;
+    gap: 13px;
+
+    @include tablet {
+      flex-flow: row wrap;
+
+      justify-content: center;
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+
+      justify-content: space-between !important;
+    }
+  }
+
+  &__item {
+    padding: 26px 22px 31px 30px;
+
+    width: 100%;
+
+    background-color: var(--background-cards);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      padding: 26px 18px 26px 30px;
+
+      max-width: 49%;
+
+      height: 159px;
+      gap: 16px;
+
+      &:first-child {
+        gap: 36px;
+      }
+
+      [lang="pt"] & {
+        height: 180px;
+      }
+    }
+
+    @include largeDesktop {
+      max-width: 270px;
+    }
+
+    &-question,
+    &-answer {
+      color: var(--background-alternative);
+      font-size: var(--font-size-l);
+      font-weight: var(--font-weight-400);
+      line-height: 19.36px;
+      text-align: left;
+      letter-spacing: -0.03em;
+    }
+
+    &-answer {
+      margin: 0;
+    }
+
+    &-question {
+      margin-bottom: 11px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

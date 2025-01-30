@@ -1,0 +1,93 @@
+@import '~styles/mixins/index';
+
+.brazilian-webinar-claudinho-about {
+  padding: 0;
+
+  &__title {
+    position: relative;
+
+    margin: 0 auto 34.35px;
+
+    width: 100%;
+
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-600);
+    line-height: 38.4px;
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    @include tablet {
+      margin-bottom: 46px;
+
+      max-width: 770px;
+
+      font-size: var(--font-size-32);
+      line-height: 51.2px;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 51%;
+      bottom: -16px;
+
+      display: block;
+
+      width: 244px;
+      height: 62px;
+
+      background: url("https://direct-landings.azureedge.net/assets/img/pages/brazilian-webinar-claudinho/about-marker.svg") no-repeat center/contain;
+
+      transform: translateX(-50%);
+
+      @include tablet {
+        left: 50%;
+        bottom: -20px;
+
+        width: 298px;
+        height: 77px;
+      }
+    }
+  }
+
+  &__photo {
+    margin: 0 auto var(--spacing-s);
+
+    width: 126.18px;
+    height: 126.18px;
+
+    background: url("https://direct-landings.azureedge.net/assets/img/pages/brazilian-webinar-claudinho/claudinho-photo.webp") no-repeat center/contain;
+
+    @include tablet {
+      margin-bottom: 22px;
+
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  &__name {
+    margin: 0 auto 18.47px;
+
+    max-width: 126px;
+
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-500);
+    line-height: 19.36px;
+    text-align: center;
+    letter-spacing: -0.03em;
+
+    @include tablet {
+      margin-bottom: 41px;
+
+      max-width: 170px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    max-width: 420px;
+  }
+}

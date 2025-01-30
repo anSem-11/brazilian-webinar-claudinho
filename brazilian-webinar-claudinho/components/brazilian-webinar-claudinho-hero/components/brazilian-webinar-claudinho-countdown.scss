@@ -1,0 +1,226 @@
+@import '~styles/mixins/index';
+
+
+.brazilian-webinar-claudinho-countdown {
+  --brazilian-webinar-countdown-grey: #7B7B7B;
+
+  background-color: var(--brazilian-webinar-countdown-background);
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    bottom: -429px;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 1170px;
+    height: 531px;
+
+    transform: translateX(-50%);
+
+    [lang="pt"] & {
+      height: 578px;
+    }
+  }
+
+  &__wrapper {
+    padding: 37px var(--spacing-s) var(--spacing-4xl);
+
+    width: 100%;
+
+    @include tablet {
+      padding: 75px 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto var(--spacing-m);
+
+    color: var(--background-primary);
+
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: var(--font-size-24);
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    @include tablet {
+      margin-bottom: var(--spacing-2xl);
+
+      max-width: 779px;
+
+      font-size: var(--font-size-36);
+      line-height: var(--font-size-36);
+    }
+  }
+
+  &__time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--background-primary);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+
+      margin: 0 auto 4px;
+
+      max-width: 779px;
+    }
+  }
+
+  &__time,
+  &__location {
+    font-size: var(--font-size-semi-xl);
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &__time {
+    margin-bottom: var(--spacing-s);
+
+    @include tablet {
+      margin: 0 22px 0 4px;
+    }
+  }
+
+  &__location {
+    margin: 0 auto;
+
+    max-width: 200px;
+
+    line-height: 26px;
+
+    @include tablet {
+      margin: 0 var(--spacing-s) 0 var(--spacing-xs);
+
+      max-width: fit-content;
+    }
+  }
+
+  &__session {
+    margin-bottom: var(--spacing-xs);
+
+    color: var(--background-primary);
+
+    font-size: var(--font-size-semi-xl);
+    font-weight: var(--font-weight-700);
+    line-height: 28px;
+    text-align: center;
+  }
+
+  &__date {
+    margin-bottom: var(--spacing-s);
+
+    color: var(--color-alternative);
+    font-size: 24px;
+    font-weight: var(--font-weight-700);
+    line-height: var(--line-height-150);
+    text-align: center;
+    letter-spacing: -0.72px;
+
+
+    @include desktop {
+      font-size: 36px;
+      letter-spacing: -1.08px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin: 0 auto 34px;
+
+    width: 100%;
+    max-width: 300px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__box-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    &:not(:last-child)::after {
+      content: ':';
+
+      position: absolute;
+      top: 22px;
+      right: -12px;
+
+      color: var(--brazilian-webinar-countdown-grey);
+      font-size: var(--font-size-semi-xl);
+
+      font-weight: var(--font-weight-600);
+      line-height: 50%;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &__box-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+
+    border-radius: 4px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: var(--background-alternative);
+
+    color: var(--background-brand);
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-600);
+    line-height: 48.41px;
+    text-align: center;
+    letter-spacing: -0.06em;
+  }
+
+  &__box-label {
+    margin: 0;
+
+    color: var(--brazilian-webinar-countdown-grey);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-500);
+    line-height: 19.36px;
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 420px;
+    height: 69px;
+
+    .ui-button-layout_l {
+      padding: var(--spacing-l);
+
+      height: 69px;
+    }
+
+    .ui-button-layout-content {
+      font-size: var(--font-size-m);
+
+      @include tablet {
+        font-size: var(--font-size-semi-xl);
+      }
+    }
+  }
+}

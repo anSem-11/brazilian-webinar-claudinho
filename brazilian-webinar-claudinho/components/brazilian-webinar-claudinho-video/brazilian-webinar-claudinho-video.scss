@@ -1,0 +1,127 @@
+@import '~styles/index';
+
+
+.brazilian-webinar-claudinho-video {
+  padding: var(--spacing-4xl) 0 14px;
+
+  @include tablet {
+    padding: 528px 0 33px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    width: 100%;
+
+    @include tablet {
+      margin: 0 auto;
+
+      width: 770px;
+    }
+  }
+
+  &__video {
+    border-radius: 30px;
+
+    width: 100%;
+    height: auto;
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 219px !important;
+
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 199px !important;
+    }
+  }
+
+  &__button-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: var(--spacing-xl);
+
+    width: 100%;
+
+    @include tablet {
+      bottom: var(--spacing-3xl);
+    }
+
+    .ui-button-layout-content {
+      display: flex;
+      gap: var(--spacing-s);
+
+      @include tablet {
+        font-size: var(--font-size-semi-xl);
+
+        [lang="pt"] & {
+          font-size: var(--font-size-l);
+        }
+      }
+    }
+
+    .ui-button-layout_l {
+      padding: var(--spacing-l) var(--spacing-xl);
+
+      height: 70px;
+    }
+  }
+
+  &__button-playing {
+    position: absolute;
+    left: 23px;
+    bottom: 0;
+
+    justify-content: center;
+
+    border-radius: 100%;
+
+    width: 69px !important;
+    height: 69px;
+
+    transform: unset;
+
+    @include tablet {
+      width: 69px !important;
+    }
+
+    .ui-button-layout_l {
+      padding: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__progress-wrapper {
+    position: absolute;
+    right: 23px;
+    bottom: 31px;
+
+    overflow: hidden;
+
+    border-radius: 2px;
+
+    width: calc(100% - 130px);
+
+    height: 4px;
+
+    background: #ffffffb9;
+  }
+
+  &__progress-bar {
+    border-radius: 2px;
+
+    width: 0;
+    height: 100%;
+
+    background: var(--background-primary);
+
+    transition: width 0.2s linear;
+  }
+}

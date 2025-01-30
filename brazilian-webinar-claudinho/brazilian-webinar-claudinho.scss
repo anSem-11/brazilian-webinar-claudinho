@@ -1,0 +1,53 @@
+@import '~styles/index';
+@import '../../../global-styles/fx-typography-style';
+
+:root {
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+  --font-size-36: 36px;
+  --font-size-42: 42px;
+  --font-size-60: 60px;
+  --brazilian-webinar-countdown-background: #382F30;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family-default);
+}
+
+.header-landing {
+  background-color: var(--background-primary) !important;
+
+  &__btn-login {
+    color: var(--breadcrumbs-color) !important;
+  }
+
+  .ui-button-layout {
+    border: 1px solid var(--breadcrumbs-color);
+
+    background-color: var(--breadcrumbs-color);
+  }
+
+  .ui-button-layout_m {
+    padding: var(--spacing-m) var(--spacing-l);
+  }
+}
+
+.landing-container {
+  position: relative;
+
+  margin: 0 auto;
+  padding-right: var(--spacing-s);
+  padding-left: var(--spacing-s);
+
+  max-width: 1200px;
+
+  @include tablet {
+    padding-right: var(--spacing-m);
+    padding-left: var(--spacing-m);
+  }
+}
